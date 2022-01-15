@@ -42,8 +42,8 @@ public class ver_datos_tutor extends AppCompatActivity {
         buttonContactar=(Button)findViewById(R.id.buttonContactar);
         foto=(ImageView)findViewById(R.id.id_foto);
         new ver_datos_tutor.Task().execute();
-        //cuando damos click en boton contactar
 
+        //cuando damos click en boton contactar
         buttonContactar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +57,7 @@ public class ver_datos_tutor extends AppCompatActivity {
                 }
             }
         });
+        //*fin de boton contactar
     }
 
     //click en boton
@@ -86,8 +87,15 @@ public class ver_datos_tutor extends AppCompatActivity {
                 Statement statement = connection.createStatement();
 
                 /*Cargamos los datos*/
-                PreparedStatement sql_cargar = connection.prepareStatement("SELECT * FROM test WHERE id_test=?");
-                sql_cargar.setString(1,"5");   //setInt, setDouble
+                //PreparedStatement sql_cargar = connection.prepareStatement("SELECT * FROM test WHERE id_test=?");
+                PreparedStatement sql_cargar = connection.prepareStatement("SELECT T.id_tutor, E.nombre_completo,  ET.desc_especialidad, T.descripcion, HT.desc_habilidad, E.num_telefono, T.foto FROM Tutor as T\n" +
+                                                                                                                                                    "\tLEFT JOIN Estudiante as E ON T.id_estudiante=E.id_estudiante\n" +
+                                                                                                                                                    "    LEFT JOIN EspecialidadesTutor as ET  ON T.id_tutor=ET.id_tutor\n" +
+                                                                                                                                                    "    LEFT JOIN HabilidadesTutor as HT ON T.id_tutor=HT.id_tutor\n" +
+                                                                                                                                                    "    WHERE T.id_tutor=?\n" +
+                                                                                                                                                    "    LIMIT 1\n" +
+                                                                                                                                                    "    ;");
+                sql_cargar.setString(1,"1");   //setInt, setDouble
                 ResultSet resultSet = sql_cargar.executeQuery();
                 while (resultSet.next()) {
                     records_nombre = resultSet.getString(2) ;
