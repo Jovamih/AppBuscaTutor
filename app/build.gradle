@@ -36,6 +36,7 @@ dependencies {
     implementation files('libs\\mysql-connector-java-5.1.4.jar')
     //añadido para la carga de foto
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'org.jetbrains:annotations:15.0'
     //
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
