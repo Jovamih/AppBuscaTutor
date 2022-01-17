@@ -46,11 +46,11 @@
 
             <ImageView
                 android:id="@+id/id_foto"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="15sp"
-                android:background="@drawable/border_foto" />
+                android:layout_marginTop="15sp" />
+                <!-- android:background="@drawable/border" /> -->
 
             <TextView
                 android:id="@+id/textView_nombre"
