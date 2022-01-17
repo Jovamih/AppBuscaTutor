@@ -10,11 +10,12 @@
         <entry key="..\:/Users/avira/AndroidStudioProjects/AppBuscaTutor/app/src/main/res/drawable/item_homepage.xml" value="0.1" />
         <entry key="..\:/Users/avira/AndroidStudioProjects/AppBuscaTutor/app/src/main/res/drawable/transparent_background.xml" value="0.1" />
         <entry key="..\:/Users/avira/AndroidStudioProjects/AppBuscaTutor/app/src/main/res/drawable/user_icon.xml" value="0.1" />
-        <entry key="..\:/Users/avira/AndroidStudioProjects/AppBuscaTutor/app/src/main/res/layout/activity_homepage_vista_tutores.xml" value="0.22" />
+        <entry key="..\:/Users/avira/AndroidStudioProjects/AppBuscaTutor/app/src/main/res/layout/activity_homepage_vista_tutores.xml" value="0.23703703703703705" />
         <entry key="..\:/Users/avira/AndroidStudioProjects/AppBuscaTutor/app/src/main/res/layout/activity_main.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/avira/AndroidStudioProjects/AppBuscaTutor/app/src/main/res/layout/activity_registrar_datos_tutor.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/avira/AndroidStudioProjects/AppBuscaTutor/app/src/main/res/layout/activity_terminos_condiciones.xml" value="0.2" />
         <entry key="..\:/Users/avira/AndroidStudioProjects/AppBuscaTutor/app/src/main/res/layout/activity_ver_datos_tutor.xml" value="0.25" />
+        <entry key="..\:/Users/avira/AndroidStudioProjects/AppBuscaTutor/app/src/main/res/layout/recycler_template.xml" value="0.25" />
         <entry key="..\:/Users/avira/AndroidStudioProjects/AppBuscaTutor/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22" />
       </map>
     </option>
