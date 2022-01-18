@@ -42,20 +42,22 @@ public class homepage extends AppCompatActivity {
         System.out.println("TASK FINISHED");
 
     }
-
+/*
     private void createItemTutores(int n) {
         List<TutoresFavoritos> lista_tutores = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             lista_tutores.add(new TutoresFavoritos("Lana Rohades", "Es habilidosa", "https://tinyurl.com/4m6nytvh", 1));
         }
 
-        ListAdapter listAdapter = new ListAdapter(lista_tutores, this);
+        ListAdapter listAdapter = new ListAdapter(lista_tutores, this,ListAdapter.OnItemClickListener(){
+
+        });
         RecyclerView recyclerView = findViewById(R.id.lista_items);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(listAdapter);
     }
-
+*/
 
     class TaskTutoresFavoritos extends AsyncTask<Void, Void, Void> {
         private String stringConnection = "jdbc:mysql://buscatutordatabase.cuxsffuy95k9.us-east-1.rds.amazonaws.com:3306/buscatutor?UseUnicode=true&characterEncoding=utf8";
@@ -123,7 +125,6 @@ public class homepage extends AppCompatActivity {
                 resultSet=prepareStatement.executeQuery();
                 while(resultSet.next()){
                     this.nombre_usuario=resultSet.getString(1);
-                    this.foto_usuario= resultSet.getString(2);
                 }
                 resultSet.close();
                 connection.close();
@@ -154,12 +155,22 @@ public class homepage extends AppCompatActivity {
                     .into(image);
 
             System.out.println("EJECUTANDO EL RECYCLER VIEW");
-            ListAdapter listAdapter= new ListAdapter(this.tutoresFavoritos,homepage.this);
+            ListAdapter listAdapter= new ListAdapter(this.tutoresFavoritos, homepage.this, new ListAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(TutoresFavoritos item) {
+                    moveToPerfilTutor(item);
+                }
+            });
             RecyclerView recyclerView= findViewById(R.id.lista_items);
             recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(new LinearLayoutManager(homepage.this));
             recyclerView.setAdapter(listAdapter);
             super.onPostExecute(aVoid);
+        }
+        public void moveToPerfilTutor(TutoresFavoritos item){
+            Intent intent= new Intent(homepage.this,ver_datos_tutor.class);
+            intent.putExtra("id_tutor",String.valueOf(item.getId()));
+            startActivity(intent);
         }
 
         public TaskTutoresFavoritos(int id) {
