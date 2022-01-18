@@ -39,7 +39,7 @@ android:orientation="vertical"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:text="Dasha Taran"
-                android:textColor="@color/blanco"
+                android:textColor="#FA5075"
                 android:textSize="23sp"
                 android:textStyle="bold" />
 
