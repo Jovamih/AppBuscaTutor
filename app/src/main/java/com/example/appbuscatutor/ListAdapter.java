@@ -20,11 +20,18 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     private List<TutoresFavoritos> lista_tutores;
     private LayoutInflater mInflater;
     private Context context;
+    final ListAdapter.OnItemClickListener listener;
 
-    public ListAdapter(List<TutoresFavoritos> lista_tutores, Context context){
+    public interface OnItemClickListener{
+        void onItemClick(TutoresFavoritos item);
+    }
+
+    public ListAdapter(List<TutoresFavoritos> lista_tutores, Context context,ListAdapter.OnItemClickListener listener){
         this.lista_tutores=lista_tutores;
         this.context=context;
         this.mInflater= LayoutInflater.from(context);
+        this.mInflater= LayoutInflater.from(context);
+        this.listener=listener;
     }
 
     @NonNull
@@ -65,6 +72,12 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
                     .into(foto);
             textNombre.setText(item.getNombre());
             textDescripcion.setText(item.getDescripcion());
+            itemView.setOnClickListener( new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(item);
+                }
+            });
 
         }
 

@@ -5,7 +5,9 @@ public class TutoresFavoritos {
     private String descripcion;
     private String foto;
     private int id;
-
+    public int getId(){
+        return id;
+    }
     public String getNombre() {
         return nombre;
     }

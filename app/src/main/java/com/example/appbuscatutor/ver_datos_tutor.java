@@ -29,11 +29,15 @@ public class ver_datos_tutor extends AppCompatActivity {
     Button buttonContactar;
     ImageView foto;
     String numero;
+    String id_tutor=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_datos_tutor);
+        //obtener el ID de la intefaz anterior
+        Intent intent=getIntent();
+        id_tutor=intent.getStringExtra("id_tutor");
 
         nombre=(TextView)findViewById(R.id.textView_nombre);
         especialidad=(TextView)findViewById(R.id.textView_especialidad);
@@ -95,7 +99,7 @@ public class ver_datos_tutor extends AppCompatActivity {
                                                                                                                                                     "    WHERE T.id_tutor=?\n" +
                                                                                                                                                     "    LIMIT 1\n" +
                                                                                                                                                     "    ;");
-                sql_cargar.setString(1,"1");   //setInt, setDouble
+                sql_cargar.setString(1,id_tutor);   //setInt, setDouble
                 ResultSet resultSet = sql_cargar.executeQuery();
                 while (resultSet.next()) {
                     records_nombre = resultSet.getString(2) ;
