@@ -38,6 +38,7 @@ public class ver_datos_tutor extends AppCompatActivity {
         //obtener el ID de la intefaz anterior
         Intent intent=getIntent();
         id_tutor=intent.getStringExtra("id_tutor");
+        System.out.println("ID RECUPERADO DE HOMEPAGE= "+id_tutor);
 
         nombre=(TextView)findViewById(R.id.textView_nombre);
         especialidad=(TextView)findViewById(R.id.textView_especialidad);

@@ -125,7 +125,6 @@ public class homepage extends AppCompatActivity {
                 resultSet=prepareStatement.executeQuery();
                 while(resultSet.next()){
                     this.nombre_usuario=resultSet.getString(1);
-                    this.foto_usuario= resultSet.getString(2);
                 }
                 resultSet.close();
                 connection.close();
@@ -170,7 +169,8 @@ public class homepage extends AppCompatActivity {
         }
         public void moveToPerfilTutor(TutoresFavoritos item){
             Intent intent= new Intent(homepage.this,ver_datos_tutor.class);
-            intent.putExtra("id_tutor",item.getId());
+            intent.putExtra("id_tutor",String.valueOf(item.getId()));
+            startActivity(intent);
         }
 
         public TaskTutoresFavoritos(int id) {
