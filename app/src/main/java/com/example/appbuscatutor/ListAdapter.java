@@ -1,7 +1,6 @@
 package com.example.appbuscatutor;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +17,11 @@ import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     //Lista de elementos de los tutores favoritos
-    private List<ListTutoresFavoritos> lista_tutores;
+    private List<TutoresFavoritos> lista_tutores;
     private LayoutInflater mInflater;
     private Context context;
 
-    public ListAdapter(List<ListTutoresFavoritos> lista_tutores,Context context){
+    public ListAdapter(List<TutoresFavoritos> lista_tutores, Context context){
         this.lista_tutores=lista_tutores;
         this.context=context;
         this.mInflater= LayoutInflater.from(context);
@@ -45,7 +44,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     public int getItemCount() {
         return lista_tutores.size();
     }
-    public void setItems(List<ListTutoresFavoritos> items){
+    public void setItems(List<TutoresFavoritos> items){
         lista_tutores=items;
     }
 
@@ -59,7 +58,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             textNombre=itemView.findViewById(R.id.id_nombre_tutor);
             textDescripcion=itemView.findViewById(R.id.id_descripcion_tutor);
         }
-        void bindData(final ListTutoresFavoritos item){
+        void bindData(final TutoresFavoritos item){
             Picasso.get()
                     .load(item.getFoto())
                     .error(R.mipmap.ic_launcher_round)

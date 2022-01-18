@@ -37,6 +37,7 @@
              app:cardElevation="0dp">
 
              <ImageView
+                 android:id="@+id/id_foto_usuario"
                  android:layout_width="match_parent"
                  android:layout_height="match_parent"
                  android:scaleType="centerCrop"
@@ -45,6 +46,7 @@
          </androidx.cardview.widget.CardView>
 
          <TextView
+             android:id="@+id/id_nombre_usuario"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:text="Johan Lohizo"
@@ -64,13 +66,16 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+        >
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/lista_items"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
         </androidx.recyclerview.widget.RecyclerView>
 

@@ -1,9 +1,10 @@
 package com.example.appbuscatutor;
 
-public class ListTutoresFavoritos {
+public class TutoresFavoritos {
     private String nombre;
     private String descripcion;
     private String foto;
+    private int id;
 
     public String getNombre() {
         return nombre;
@@ -24,13 +25,17 @@ public class ListTutoresFavoritos {
     public String getFoto() {
         return foto;
     }
+    public void setId(int id){
+        this.id=id;
+    }
 
     public void setFoto(String foto) {
         this.foto = foto;
     }
-    public ListTutoresFavoritos(String nombre,String descripcion,String foto){
+    public TutoresFavoritos(String nombre, String descripcion, String foto, int id){
         this.nombre=nombre;
         this.descripcion=descripcion;
         this.foto=foto;
+        this.id = id;
     }
 }
