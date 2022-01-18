@@ -3,7 +3,7 @@
     package="com.example.appbuscatutor">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> //permiso para abrir galeria
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,12 +11,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppBuscaTutor"
-        >
-        <activity android:name=".terminos_condiciones"></activity>
+        android:theme="@style/Theme.AppBuscaTutor">
+        <activity
+            android:name=".buscar_tutor"
+            android:exported="false" />
+        <activity android:name=".terminos_condiciones" />
         <activity android:name=".ver_datos_tutor" />
         <activity android:name=".registrar_datos_tutor" />
-        <activity android:name=".homepage"/>
+        <activity android:name=".homepage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
