@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //cambiar registrar_datos_tutor por su interfaz
-                Intent intent = new Intent(MainActivity.this,homepage.class);
+                Intent intent = new Intent(MainActivity.this,registrar_usuario.class);
                 startActivity(intent);
             }
         });

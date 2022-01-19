@@ -35,7 +35,7 @@ public class homepage extends AppCompatActivity {
         //obtener el Intent de la actividad actual recien creada
         Intent intent = getIntent();
         //Obtener el ID usuario  que la interfaz anterior envio
-        //String id_usuario=intent.getStringExtra("id_usuario");
+        id_usuario=Integer.parseInt(intent.getStringExtra("id_usuario"));
         ///createItemTutores(10);
 
         new TaskTutoresFavoritos(id_usuario).execute();
