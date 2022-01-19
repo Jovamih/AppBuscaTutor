@@ -44,13 +44,29 @@
             android:background="@drawable/border"
             android:orientation="vertical">
 
-            <ImageView
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="0dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/id_foto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!--<ImageView
                 android:id="@+id/id_foto"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="15sp" />
-                <!-- android:background="@drawable/border" /> -->
+                android:layout_marginTop="15sp"
+                android:background="@drawable/border_foto" />-->
 
             <TextView
                 android:id="@+id/textView_nombre"
