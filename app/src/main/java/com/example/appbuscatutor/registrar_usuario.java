@@ -55,7 +55,7 @@ public class registrar_usuario extends AppCompatActivity {
                     rb.execute();
                     //rb.cancel(true);
 
-                }{//en caso contrario procedemos con la insercion en la base de datos
+                }else{//en caso contrario procedemos con la insercion en la base de datos
                     // click handling code
                     System.out.println("Las contraseñas no  conciden");
                     //Looper.prepare();
