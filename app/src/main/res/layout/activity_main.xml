@@ -1,63 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="93dp"
+        android:layout_marginBottom="93dp"
+        android:src="@drawable/logo2" />
 
-        <LinearLayout
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/id_titulo_terminos"
-                android:layout_width="match_parent"
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70sp"
-                android:gravity="center_horizontal"
-                android:text="MENU TEMPORAL"
-                android:textColor="@color/Titulos"
-                android:textSize="28sp"
-                android:textStyle="bold"
-                android:verticalScrollbarPosition="defaultPosition" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Bienvenidos!"
+                android:textColor="#FA5075"
+                android:textSize="30dp"
+                android:textStyle="bold" />
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="30sp"
-                android:layout_marginLeft="30sp"
-                android:layout_marginTop="70sp"
-                android:layout_marginEnd="30sp"
-                android:layout_marginRight="30sp"
-                android:orientation="horizontal">
+        </RelativeLayout>
 
-                <Button
-                    android:id="@+id/id_btnA"
-                    android:layout_width="127dp"
-                    android:layout_height="60dp"
-                    android:layout_marginEnd="10sp"
-                    android:layout_marginRight="10sp"
-                    android:layout_weight="1"
-                    android:text="A"
-                    android:textStyle="normal"
-                    app:backgroundTint="@color/Titulos"
-                    app:cornerRadius="20sp" />
+        <EditText
+            android:id="@+id/txttemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:backgroundTint="#FA5075"
+            android:textColorHint="@color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="Email" />
 
 
-            </LinearLayout>
 
 
-        </LinearLayout>
+        <EditText
+            android:id="@+id/txttpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:backgroundTint="#FA5075"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@color/white"
+            android:hint="Contraseña" />
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/btnin"
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Ingresar"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            app:backgroundTint="#FA5075"
+            app:cornerRadius="30sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="No tienes una cuenta?"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:onClick="registrar_usuario"
+        android:text="Registrate"
+        android:textColor="#FA5075"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+</LinearLayout>
