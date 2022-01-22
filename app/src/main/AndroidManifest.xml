@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppBuscaTutor">
         <activity
+            android:name=".verificacion_paypal"
+            android:exported="false" />
+        <activity
+            android:name=".paypal"
+            android:exported="false" />
+        <activity
             android:name=".registrar_usuario"
             android:exported="false" />
         <activity
